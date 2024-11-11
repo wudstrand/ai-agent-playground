@@ -1,0 +1,8 @@
+langchain
+openai
+PyYAML~=6.0
+langchain-openai~=0.2.6
+langchain-community~=0.3.5
+langchain-text-splitters~=0.3.2
+BeautifulSoup4~=4.10.0
+faiss-cpu~=1.7.1

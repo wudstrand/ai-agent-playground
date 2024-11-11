@@ -1,0 +1,34 @@
+version: 1
+
+formatters:
+  default:
+    format: "[ %(asctime)s | %(levelname)-4s ] %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S %Z"
+  detailed:
+    format: "[ %(name)-15s | %(asctime)s | %(threadName)-10s | %(module)s:%(funcName)s:%(lineno)s ] - %(levelname)-8s - %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S %Z"
+
+handlers:
+  default:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: default
+    stream: ext://sys.stdout
+  info_file:
+    class: logging.FileHandler
+    level: INFO
+    formatter: default
+    filename: app-info.log
+    mode: w
+  debug_file:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: default
+    filename: app-debug.log
+    mode: w
+
+loggers:
+  src:
+    class: logging.RootLogger
+    level: DEBUG
+    handlers: [ default, info_file, debug_file ]

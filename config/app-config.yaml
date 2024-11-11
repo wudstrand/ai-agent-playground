@@ -1,0 +1,10 @@
+api:
+  openai:
+    key: [ADD API KEY HERE]
+  langchain:
+    tracing: true
+    endpoint: http://localhost:5000
+    project: ai-agent-playground [id=c221967f-4f60-4345-852c-4d59960bc7b9]
+    key: [ADD API KEY HERE]
+  tavily:
+    key: [ADD API KEY HERE]
